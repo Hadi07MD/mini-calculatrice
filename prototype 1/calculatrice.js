@@ -1,15 +1,15 @@
-// Variables
-let firstNumber, secondNumber, total, operation;
-let firstNumberStr, secondNumberStr;
+        // Variables
+let a, b, total, operation;
+let aStr, bStr;
 
-// Présentation
+        // Présentation
 function onClickNumber(number) {
-    if (firstNumberStr == undefined) {
-            firstNumberStr = number
+    if (aStr == undefined) {
+            aStr = number
         
     } else {
-        if (secondNumberStr == undefined) {
-            secondNumberStr = number
+        if (bStr == undefined) {
+            bStr = number
         }
     }
 
@@ -20,16 +20,16 @@ function onClickNumber(number) {
 function display(number) {
     let display = document.getElementById("display");
     display.value = "";
-    if (firstNumber != undefined && secondNumber != undefined && operation != undefined) {
+    if (a != undefined && b != undefined && operation != undefined) {
 
         display.value = number;
     } else {
-        if (firstNumberStr != undefined)
-            display.value += firstNumberStr
+        if (aStr != undefined)
+            display.value += aStr
         if (operation != undefined)
             display.value += operation
-        if (secondNumberStr != undefined)
-            display.value += secondNumberStr
+        if (bStr != undefined)
+            display.value += bStr
     }
 
 
@@ -44,32 +44,32 @@ function operationHandle(OperationParm) {
 }
 
 function equal() {
-    firstNumber = parseFloat(firstNumberStr)
-    secondNumber = parseFloat(secondNumberStr)
-    total = calculer(firstNumber, secondNumber, operation)
+    a = parseFloat(aStr)
+    b = parseFloat(bStr)
+    total = calculer(a, b, operation)
     display(total)
 }
 
 
-function calculer(firstNumber, secondNumber, operation) {
+function calculer(a, b, operation) {
     let _solution = undefined
 
     switch (operation) {
         case '+':
-            _solution = firstNumber + secondNumber;
+            _solution = a + b;
             break;
         case '-':
-            _solution = firstNumber - secondNumber;
+            _solution = a - b;
             break;
     }
     return _solution
 }
 
 function resetValues() {
-    firstNumber = undefined;
-    secondNumber = undefined;
-    firstNumberStr = undefined;
-    secondNumberStr = undefined;
+    a = undefined;
+    b = undefined;
+    aStr = undefined;
+    bStr = undefined;
     operation = undefined;
     let display = document.getElementById("display");
     
