@@ -3,24 +3,24 @@ let x, y, solution, operation;
 let xString, yString;
 
 function Calculate(x, y, operation) {
-    let _solution = undefined;
+    let _total = undefined;
     switch (operation) {
         case '+':
-            _solution = x + y;
+            _total = x + y;
             break;
         case '-':
-            _solution = x - y;
+            _total = x - y;
             break;
         case '/':
-            _solution = x / y;
+            _total = x / y;
             break;
         case '*':
-            _solution = x * y;
+            _total = x * y;
             break;
         default:
             break;
     }
-    return _solution;
+    return _total;
 }
 
 function SelectNumber(number) {
@@ -65,14 +65,14 @@ function Operation(operationParam) {
     }
 }
 
-function Jet() {
+function equal() {
     x = parseFloat(xString);
     y = parseFloat(yString);
     solution = Calculate(x, y, operation);
     Display(solution);
 }
 
-function Restart() {
+function Rest() {
     x = undefined;
     y = undefined;
     xString = undefined;
