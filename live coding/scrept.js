@@ -1,29 +1,33 @@
-// Variables
 let x, y, operation;
 let xString, yString;
 
 function Calculate(x, y, operation) {
+
     let _total = undefined;
+
     switch (operation) {
         case '+':
-            _total = x + y;
+            _total = x + y ;
             break;
         case '-':
-            _total = x - y;
+            _total = x - y ;
             break;
         case '/':
-            _total = x / y;
-            break;
-        case '*':
-            _total = x * y;
-            break;
+            _total = x / y ;
+            break;   
+        case '*': 
+             _total = x * y ;
+            break; 
         default:
-            break;
+            break;   
+               
     }
+
     return _total;
 }
 
 function SelectNumber(number) {
+
     if (x == undefined) {
         if (xString == undefined) xString = '';
         xString += number;
@@ -40,32 +44,33 @@ function Display(number) {
     let afficheur = document.getElementById("afficheur");
     afficheur.value = "";
 
-    if (x != undefined && y != undefined && operation != undefined) {
-
+    if (x != undefined && y != undefined && operation != undefined){
         afficheur.value = number;
     } else {
         if (xString != undefined)
-            afficheur.value += xString
-        if (operation != undefined)
-            afficheur.value += operation
+          afficheur.value += xString
+        
+        if ( operation != undefined)
+          afficheur.value += operation
         if (yString != undefined)
-            afficheur.value += yString
-
+          afficheur.value += yString
     }
 }
 
-
 function Operation(operationParam) {
+
     if (operation == undefined) {
         operation = operationParam;
         x = parseFloat(xString);
         Display();
-    } else {
-        alert("Une operation existent déjà! " + operation);
+    }
+    else{
+        alert("Une operation existent déja" + operation);
     }
 }
 
 function equal() {
+
     x = parseFloat(xString);
     y = parseFloat(yString);
     solution = Calculate(x, y, operation);
@@ -73,11 +78,12 @@ function equal() {
 }
 
 function Rest() {
+    
     x = undefined;
     y = undefined;
     xString = undefined;
     yString = undefined;
     operation = undefined;
     let afficheur = document.getElementById("afficheur");
-    afficheur.value = "";
+    afficheur.value = ";"
 }
