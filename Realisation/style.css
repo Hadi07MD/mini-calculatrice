@@ -3,13 +3,19 @@
      background-color: black; 
 } 
 
+  body{
+    min-height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
 
 .division {
-    display: block;
-    width: 30%;
-    margin: 
-    auto;
-    padding: 25px;
+    display:flex;
+    flex-wrap: wrap;
+    flex: 0 1 60%;
+     min-width:400px;
 }
 
 .screen {
