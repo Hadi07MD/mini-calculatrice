@@ -18,6 +18,7 @@ function Calculate(x, y, operation) {
             _total = x * y;
             break;
         default:
+            alert("Please enter numbers and oprations")
             break;
     }
     return _total;
@@ -25,10 +26,13 @@ function Calculate(x, y, operation) {
 
 function SelectNumber(number) {
     if (x == undefined) {
-        if (xString == undefined) xString = '';
+        if (xString == undefined)
+            xString = '';
         xString += number;
-    } else {
-        if (yString == undefined) yString = '';
+    }
+    else {
+        if (yString == undefined) 
+            yString = '';
         yString += number;
     }
 
@@ -41,16 +45,15 @@ function Display(number) {
     afficheur.value = "";
 
     if (x != undefined && y != undefined && operation != undefined) {
-
         afficheur.value = number;
-    } else {
+    }
+    else {
         if (xString != undefined)
             afficheur.value += xString
         if (operation != undefined)
             afficheur.value += operation
         if (yString != undefined)
             afficheur.value += yString
-
     }
 }
 
