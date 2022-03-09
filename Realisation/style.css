@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-     background-color: black; 
 } 
 
   body{
@@ -8,6 +7,9 @@
     display:flex;
     justify-content: center;
     align-items: flex-start;
+    background-image: url(/img/SquidGame_Unit_103_1280.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
@@ -21,16 +23,17 @@
 .screen {
   position: relative;
   padding: 15px 0 0;
-  margin-top: 10px;
+  margin-top: 200px;
   width: 50%;
   font-size: 50px;
   font-family: inherit;
   width: 100%;
-  border: 3px solid white;
+  border: 3px solid black;
   outline: 0;
+  font-weight: bold;
   font-size: 1.3rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: white;
+  color: black;
   padding: 7px 0;
   background: transparent;
   transition: border-color 0.2s;
